@@ -1,0 +1,77 @@
+body{
+   background:url(back.jpg)  no-repeat center center;
+   background-size:cover;
+   background-attachment:fixed;
+   background-color:#CCCCCC;
+}
+
+.top{
+	height:70px;
+
+}
+
+a{
+   color:black;
+}
+
+.left{
+	float: left;
+	width:200px;
+	margin:2px;
+	height:500px;
+	background-color:rgba(255,255,255,0.5);
+	 padding-top:1cm;
+	 color:#F00
+}
+.right{
+	float: right;
+	width:1000px;
+	height:500px;
+    margin-bottom:30px;
+}
+
+
+.right_info{
+	weight:1000px;
+	height:auto;
+	background-color:rgba(255,255,255,0.5);
+}
+
+.right_info_person{
+margin:10px;
+width:170px;
+height:50px;
+}
+.right_info_name{
+weight:auto;
+padding-top:0.4cm;
+padding-left:0.3cm;
+}
+.right_info_pic{
+float: left;
+margin-top:5px;
+weight:50px;
+}
+
+
+.right_info_content{
+margin:10px;
+padding-bottom:0.3cm;
+height:auto;
+weight:700px;
+
+
+}
+
+.right_graph{
+    margin:5px;
+	weight:1000px;
+	height:500px;
+	background-color:rgba(255,255,255,0.5);
+
+}
+
+
+
+
+

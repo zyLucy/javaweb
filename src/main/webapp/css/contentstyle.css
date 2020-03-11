@@ -1,0 +1,135 @@
+body{
+   background:url(back.jpg)  no-repeat center center;
+   background-size:cover;
+   background-attachment:fixed;
+   background-color:#CCCCCC;
+   margin:10px;
+}
+
+.top{
+	height:70px;
+
+}
+
+a{
+   color:black;
+}
+
+.left{
+	float: left;
+	width:200px;
+	margin:2px;
+	height:500px;
+	background-color:rgba(255,255,255,0.5);
+	 padding-top:1cm;
+	 color:#F00
+}
+.right{
+	float: right;
+	width:1000px;
+	height:500px;
+
+}
+
+
+.right_info{
+	weight:1000px;
+	height:auto;
+	background-color:rgba(255,255,255,0.5);
+}
+
+.right_info_person{
+margin:10px;
+width:170px;
+height:50px;
+}
+.right_info_name{
+weight:auto;
+padding-top:0.4cm;
+padding-left:0.3cm;
+}
+.right_info_pic{
+float: left;
+margin-top:5px;
+weight:50px;
+}
+
+
+.right_info_content{
+margin:10px;
+padding-bottom:0.3cm;
+height:auto;
+weight:700px;
+}
+
+.right_content{
+margin:2px;
+width:99%;
+height:710px;
+background-color:rgba(255,255,255,0.5);
+}
+
+.right_left{
+float:left;
+width:30%;
+height:710px;
+}
+.right_left_top{
+height:330px;
+margin: 3px auto;
+}
+.right_left_top_label{
+height:50px;
+line-height: 50px;
+background-color:rgba(255,255,255,0.7);
+}
+.right_left_top_image{
+height:280px;
+border:1px solid #ddd;
+}
+
+.right_left_bot{
+height:370px;
+margin: 3px auto;
+}
+.right_left_bot_label{
+height:50px;
+line-height: 50px;
+background-color:rgba(255,255,255,0.7);
+}
+.right_left_bot_image{
+height:320px;
+border:1px solid #ddd;
+}
+.right_right{
+float:right;
+width:70%;
+height:710px;
+}
+.right_label{
+height:140px;
+margin: 3px auto;
+border:1px solid #ddd;
+}
+
+.btn-w3r {
+margin:6px;
+background: #cb60b3; /* Old browsers */
+background: -moz-linear-gradient(top,  #cb60b3 0%, #ad1283 50%, #de47ac 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cb60b3), color-stop(50%,#ad1283), color-stop(100%,#de47ac)); /   *   Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=0 );
+}
+.btn-w3r:hover {
+background: #777; /* 旧版浏览器 */
+color:#e75616;
+}
+
+.right_url{
+height:550px;
+margin: 3px auto;
+border:1px solid #ddd;
+}

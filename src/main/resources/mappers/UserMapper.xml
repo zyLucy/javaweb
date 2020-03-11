@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dx.ssm.client.persist.mapper.UserMapper">
+    <resultMap id="userDo" type="com.dx.ssm.client.model.domain.UserDO">
+        <result column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_password" property="userPassword"/>
+    </resultMap>
+
+    <sql id="_column">
+        id,user_name,user_password
+    </sql>
+
+    <select id="listUsers" resultMap="userDo">
+        select
+        <include refid="_column"/>
+        from t_user;
+    </select>
+
+    <select id="listUserByUserName" resultMap="userDo">
+        select
+        <include refid="_column"/>
+        from t_user
+        where user_name = #{userName};
+    </select>
+
+    <select id="getUserById" resultMap="userDo"  parameterType="java.lang.Integer">
+        select
+        <include refid="_column"/>
+        from t_user
+        where id = #{id};
+    </select>
+
+    <insert id="saveUser" parameterType="com.dx.ssm.client.model.domain.UserDO" >
+        insert into t_user(id,user_name,user_password) values (#{user.id},#{user.userName},#{user.userPassword});
+    </insert>
+
+    <delete id="removeUserById" parameterType="java.lang.Integer">
+        delete from t_user
+        where id = #{id};
+    </delete>
+
+    <update id="updateUser" parameterType="com.dx.ssm.client.model.domain.UserDO">
+        update t_user
+        set user_name = #{user.userName},user_password = #{user.userPassword}
+        where id = #{user.id};
+    </update>
+</mapper>

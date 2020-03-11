@@ -1,0 +1,110 @@
+body{
+   background:url(back.jpg)  no-repeat center center;
+   background-size:cover;
+   background-attachment:fixed;
+   background-color:#CCCCCC;
+}
+
+.top{
+	height:70px;
+
+}
+
+a{
+   color:black;
+}
+
+.left{
+	float: left;
+	width:200px;
+	margin:2px;
+	height:500px;
+	background-color:rgba(255,255,255,0.5);
+	 padding-top:1cm;
+	 color:#F00
+}
+.right{
+	margin-left:220px;
+	width:82%;
+	height:1050px;
+	background-color:rgba(255,255,255,0.5);
+}
+
+
+.right_info{
+margin-top:10px;
+	height:auto;
+}
+.right_info_name{
+margin:10px;
+}
+.right_info_pic{
+float: left;
+margin-top:5px;
+width:50px;
+}
+.right_info_content{
+margin:10px;
+padding-bottom:0.3cm;
+height:auto;
+}
+
+.region_label{
+margin-top:15px;
+height:50px;
+line-height: 50px;
+background-color:rgba(255,255,255,0.7);
+}
+.region{
+height:400px;
+}
+
+.region_map{
+float:left;
+margin:5px;
+width:320px;
+height:350px;
+border:1px solid #ddd;
+}
+.region_bar{
+float:right;
+margin:5px;
+width:695px;
+height:350px;
+border:1px solid #ddd;
+}
+
+.pie_charts{
+margin:10px;
+}
+.pie_sex{
+height:400px;
+float:left;
+}
+.pie_sex_txt{
+height:50px;
+background-color:rgba(255,255,255,0.7);
+line-height: 50px;
+}
+.pie_sex_graph{
+width:400px;
+height:350px;
+margin:10px;
+border:2px solid #ddd;
+}
+
+.fans{
+height:400px;
+float:right;
+}
+.pie_fans_txt{
+height:50px;
+background-color:rgba(255,255,255,0.7);
+line-height: 50px;
+}
+.pie_fans_graph{
+width:500px;
+height:350px;
+margin:10px;
+border:2px solid #ddd;
+}
