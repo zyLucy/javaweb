@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dx.ssm.client.persist.mapper.TranMapper">
+    <resultMap id="tranDo" type="com.dx.ssm.client.model.TranDO">
+        <result column="uid" property="uid"/>
+        <result column="uname" property="uname"/>
+        <result column="fromwho" property="fromwho"/>
+        <result column="content" property="content"/>
+        <result column="ctime" property="time"/>
+        <result column="article" property="article"/>
+        <result column="flag" property="flag"/>
+        <result column="level" property="level"/>
+        <result column="timestr" property="timestr"/>
+        <result column="follows" property="follows"/>
+        <association property="user"  javaType="com.dx.ssm.client.model.UserInfo">
+            <!-- id：关联查询用户的唯 一标识
+                   column：指定唯 一标识用户信息的列
+                 result:普通标识
+             -->
+            <result column="uid" property="uid"/>
+            <result column="sex" property="sex"/>
+        </association>
+
+    </resultMap>
+
+    <resultMap id="userInfoDo" type="com.dx.ssm.client.model.UserInfo">
+        <result column="uid" property="uid"/>
+        <result column="sex" property="sex"/>
+        <result column="province" property="province"/>
+        <result column="fans" property="fans"/>
+
+        <association property="tran"  javaType="com.dx.ssm.client.model.TranDO">
+            <!-- id：关联查询用户的唯 一标识
+                   column：指定唯 一标识用户信息的列
+                 result:普通标识
+             -->
+            <result column="uid" property="uid"/>
+            <result column="timestr" property="timestr"/>
+        </association>
+    </resultMap>
+
+    <select id="getContent" resultMap="tranDo">
+        select * from
+        ${article} ;
+    </select>
+
+    <select id="attendPerson" resultMap="userInfoDo">
+        select user1.* , ${article}.timestr from
+        user1, ${article}
+        where  user1.uid = ${article}.uid;
+    </select>
+
+    <select id="queryFromWho" resultMap="tranDo">
+        select * from
+        ${tablename}
+        where level = 0
+    </select>
+    <select id="queryPath" resultMap="tranDo">
+        select * from
+        ${article}
+        order by level ;
+    </select>
+    <select id="queryLevelBar" resultMap="tranDo">
+        select * from
+        ${article} ;
+
+    </select>
+
+    <select id="queryByTime" resultMap="tranDo">
+        select * from
+         ${article}
+        order by ctime ;
+    </select>
+
+    <select id="queryBombPoint" resultMap="tranDo">
+        select ${article}.*,user1.sex from
+        ${article} ,user1 where  user1.uid = ${article}.uid  order by follows desc;
+    </select>
+
+    <select id="queryBombs" resultMap="tranDo">
+        select * from
+        ${article} order by follows desc;
+    </select>
+</mapper>
